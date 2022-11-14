@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Rohan's Store</title>
+</head>
+<body>
+    <h1>Welcome to Rohan's Store!</h1>
+    <form action="customerBackend.php" method="post">
+        <p>Items for Sale:</p>
+        $999 - iPhone 14 Pro: Quantity <input type="number" name="i1q" min="0" required><br>
+        $799 - iPhone 14: Quantity <input type="number" name="i2q" min="0" required><br>
+        $899 - iPhone 14 Plus: Quantity <input type="number" name="i3q" min="0" required>
+        <p>Shipping Options:</p>
+        <input type="radio" name="shipping" value="Free 7 day" required>Free 7 day
+        <br><input type="radio" name="shipping" value="$50.00 over night">$50.00 over night
+        <br><input type="radio" name="shipping" value="$5.00 3 day">$5.00 3 day
+        <p>Customer information:</p>
+        Username: <input name="user" type="email" minLength="1" required>
+        Password: <input name="pass" type="password" minLength="1" required>
+        <br><br>
+        <input onsubmit="document.querySelector('form').checkValidity()" type="submit" value="Submit Order">
+    </form>
+    <br>
+    <button onclick="document.querySelector('form').reset()">Reset Order</button>
+    <script src="./formChecker.js"></script>
+</body>
+</html>
